@@ -1,0 +1,36 @@
+.card {
+  height: 300px;
+  position: relative;
+  z-index: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.cardImg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.cardImg img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.cardInfo {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(5, 0, 0, 0.603);
+  opacity: 0;
+  transition: 0.5s;
+}
+.cardInfo h3 {
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.card:hover .cardInfo {
+  opacity: 1;
+}
